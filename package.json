@@ -1,22 +1,27 @@
 {
-  "name": "mvc_design",
+  "name": "homework15",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
-    "express-handlebars": "^2.0.1",
-    "method-override": "^2.3.8",
-    "mysql": "^2.13.0"
+    "mysql": "^2.13.0",
+    "sequelize": "^3.30.4"
   },
-  "devDependencies": {
-    "handlebars-helper-css": "^0.1.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noushinsajjadi/sequelizedBurger.git"
   },
+  "bugs": {
+    "url": "https://github.com/noushinsajjadi/sequelizedBurger/issues"
+  },
+  "homepage": "https://github.com/noushinsajjadi/sequelizedBurger#readme",
   "description": ""
 }

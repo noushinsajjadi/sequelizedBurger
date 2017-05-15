@@ -13,7 +13,7 @@ var db = require("../models");
 module.exports = function(app) {
 
   // GET route for getting all of the burgers
-  app.get("/", function(req, res) {
+  app.get("/burgers", function(req, res) {
     db.burgers.findAll({})
     .then(function(results) {
        res.json(results);
@@ -23,7 +23,7 @@ module.exports = function(app) {
   
 
   // POST route for saving a new burgers
-  app.post("/", function(req, res) {
+  app.post("/burgers", function(req, res) {
     console.log(req.body);
     db.burgers.create({
       burger_name: req.body.name,
@@ -36,16 +36,20 @@ module.exports = function(app) {
 
   
 
-  // PUT route for updating posts
-  app.put("/:id", function(req, res) {
-    db.burgers.update(req.body,
+  // PUT route for updating new burgers
+  app.put("/burgers/:id", function(req, res) {
+    db.burgers.update({devoured:true},
       {
         where: {
-          id: req.body.id
+          id: req.params.id
         }
       })
-    .then(function(burger) {
-      res.redirect("/");
+    .then(function(results) {
+      res.json(results);
     });
   });
 };
+  
+        
+
+    
